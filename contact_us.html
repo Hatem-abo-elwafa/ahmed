@@ -1,407 +1,495 @@
 <!DOCTYPE html>
-<html
-	lang="ar"
-	dir="rtl">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="description"
-			content="صفحة تواصل معنا الخاصة بمنصة مُعلِّمون. اتصل بنا لمزيد من المعلومات أو للاستفسارات." />
-		<meta
-			name="keywords"
-			content="مُعلِّمون، معلمين خصوصيين، دروس، السعودية، تواصل، دعم فني" />
-		<meta
-			name="author"
-			content="فريق مُعلِّمون" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0" />
-		<title>اتصل بنا - مُعلِّمون</title>
-		<link
-			rel="stylesheet"
-			href="CSS/responsive.css" />
-		<link
-			rel="stylesheet"
-			href="CSS/style_contact.css" />
-		<link
-			rel="stylesheet"
-			href="CSS/contact.css" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap"
-			rel="stylesheet" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-		<link
-			rel="icon"
-			type="image/svg+xml"
-			href="/vite.svg" />
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="صفحة تواصل معنا الخاصة بمنصة مُعلِّمون. اتصل بنا لمزيد من المعلومات أو للاستفسارات."
+    />
+    <meta
+      name="keywords"
+      content="مُعلِّمون، معلمين خصوصيين، دروس، السعودية، تواصل، دعم فني"
+    />
+    <meta name="author" content="فريق مُعلِّمون" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اتصل بنا - مُعلِّمون</title>
+    <link rel="stylesheet" href="CSS/responsive.css" />
+    <link rel="stylesheet" href="CSS/style_contact.css" />
+    <link rel="stylesheet" href="CSS/contact.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
 
-		<style>
-			.menu-toggle {
-				display: none;
-				background: none;
-				border: none;
-				font-size: 24px;
-				color: white;
-				cursor: pointer;
-			}
+    <style>
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+      }
+	  .logo {
+		width: 50px;
+		height: 50px
+	  }
 
-			@media (max-width: 768px) {
-				nav {
-					display: none;
-					flex-direction: column;
-					width: 100%;
-					background-color: #00aeef;
-					margin-top: 10px;
-				}
+      @media (max-width: 768px) {
+        header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px 15px;
+        }
 
-				nav.active {
-					display: flex;
-				}
+        .navbar-container {
+          flex-direction: row-reverse;
+          justify-content: space-between;
+        }
 
-				.menu-toggle {
-					display: block;
-				}
+        /* في الشاشات الصغيرة - اللوجو على اليسار */
+        .logo {
+          order: 1;
+          margin-left: 25px;
+          padding-top: 20px;
+        }
 
-				.cards {
-					justify-content: center;
-				}
+        /* زر القائمة على اليمين */
+        .menu-toggle {
+          display: block;
+          order: 2;
+          margin-right: 25px;
+        }
 
-				.card {
-					width: 100%;
-					max-width: 350px;
-				}
+        /* القائمة المخفية */
+        nav {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: auto;
+          width: 250px;
+          height: 100%;
+          background: linear-gradient(135deg, #00aeef 0%, #0092cc 100%);
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          gap: 10px;
+          box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+          transform: translateX(-100%);
+          transition: transform 0.3s ease-in-out;
+          z-index: 999;
+        }
 
-				form {
-					width: 100%;
-					max-width: none;
-					padding: 20px;
-				}
-			}
+        nav.active {
+          transform: translateX(0);
+        }
 
-			@media (max-width: 480px) {
-				.card {
-					max-width: 100%;
-				}
+        nav a {
+          padding: 12px 20px;
+          border-radius: 8px;
+          text-align: center;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
 
-				form {
-					padding: 15px;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<header>
-			<a
-				href="index.html"
-				title="العودة للرئيسية"
-				class="logo"
-				aria-label="شعار معلّمون">
-				<img
-					src="material/logo.png"
-					style="height: 80px; width: 80px"
-					alt="شعار معلّمون" />
-			</a>
-			<button
-				class="menu-toggle"
-				aria-label="فتح القائمة">
-				<i class="fas fa-bars"></i>
-			</button>
-			<nav aria-label="القائمة الرئيسية">
-				<a href="index.html">الرئيسية</a>
-				<a href="about.html">من نحن</a>
-				<a href="service.html">خدماتنا</a>
-				<a href="blog.html">المدونة</a>
-				<a
-					href="contact_us.html"
-					aria-current="page">
-					تواصل معنا
-				</a>
-			</nav>
-		</header>
+        .cards {
+          justify-content: center;
+        }
 
-		<section class="contact-hero">
-			<div class="container">
-				<h1>تواصل معنا</h1>
-				<p>أرسل لنا استفساراتك أو طلباتك وسنقوم بالرد على أسئلتك</p>
-			</div>
-		</section>
+        .card {
+          width: 100%;
+          max-width: 350px;
+        }
 
-		<section class="contact-info">
-			<div class="container">
-				<div class="info-cards">
-					<div class="info-card">
-						<div class="info-icon"><i class="fas fa-map-marked-alt"></i></div>
-						<h3>العنوان</h3>
-						<p>المملكة العربية السعودية، الرياض</p>
-					</div>
-					<div class="info-card">
-						<div class="info-icon"><i class="fas fa-envelope"></i></div>
-						<h3>البريد الإلكتروني</h3>
-						<p>support@mo3alemon.com</p>
-					</div>
-					<div class="info-card">
-						<div class="info-icon"><i class="fas fa-phone-alt"></i></div>
-						<h3>رقم الهاتف</h3>
-						<p>966541737255</p>
-					</div>
-				</div>
-			</div>
-		</section>
+        form {
+          width: 100%;
+          max-width: none;
+          padding: 20px;
+        }
+      }
 
-		<section class="contact-form-map">
-			<div class="container">
-				<div class="contact-grid">
-					<div class="map-container">
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710200.9405798347!2d42.89153154999999!3d24.7249581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15e7b33fe7952a41%3A0x5960504bc21ab69b!2sSaudi%20Arabia!5e0!3m2!1sen!2sus!4v1620123456789!5m2!1sen!2sus"
-							width="100%"
-							height="100%"
-							style="border: 0"
-							allowfullscreen=""
-							loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade"></iframe>
-					</div>
 
-					<div class="form-container">
-						<form id="contactForm">
-							<div class="form-row">
-								<div class="form-group">
-									<label for="name">الاسم</label>
-									<input
-										type="text"
-										id="name"
-										name="name"
-										placeholder="ادخل اسمك الكامل"
-										required />
-								</div>
-								<div class="form-group">
-									<label for="phone">رقم الهاتف</label>
-									<input
-										type="tel"
-										id="phone"
-										name="phone"
-										placeholder="ادخل رقم هاتفك"
-										required />
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="email">البريد الإلكتروني</label>
-								<input
-									type="email"
-									id="email"
-									name="email"
-									placeholder="ادخل بريدك الإلكتروني"
-									required />
-							</div>
-							<div class="form-group">
-								<label for="subject">الموضوع</label>
-								<input
-									type="text"
-									id="subject"
-									name="subject"
-									placeholder="ادخل موضوع الرسالة"
-									required />
-							</div>
-							<div class="form-group">
-								<label for="message">الرسالة</label>
-								<textarea
-									id="message"
-									name="message"
-									rows="6"
-									placeholder="اكتب رسالتك هنا"
-									required></textarea>
-							</div>
-							<button
-								type="submit"
-								class="submit-btn">
-								إرسال
-							</button>
-						</form>
+      @media (max-width: 480px) {
+        header {
+          height: 60px;
+          padding: 8px 10px;
+        }
 
-						<!-- Progress Bar -->
-						<div
-							id="progressBar"
-							style="display: none; margin-top: 15px">
-							<p style="margin-bottom: 5px">جارٍ إرسال الرسالة...</p>
-							<div
-								style="
-									background-color: #eee;
-									height: 10px;
-									border-radius: 5px;
-								">
-								<div
-									id="progressFill"
-									style="
-										width: 0%;
-										height: 100%;
-										background-color: #4caf50;
-										border-radius: 5px;
-									"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+        nav {
+          top: 60px;
+          padding: 15px;
+        }
 
-		<footer class="footer">
-			<div class="container">
-				<div class="footer-content">
-					<div class="footer-about">
-						<img
-							src="material/مُعلِّمون.png"
-							alt="شعار مُعلِّمون"
-							class="footer-logo" />
-						<p>
-							يهتم موقع معلمون بكل ما يخص العملية التعليمية فهو يوفر لكم نخبه
-							متميزة من المعلمين والمعلمات في شتى انحاء المملكة أونلاين او يجون
-							البيت من أجلكم
-						</p>
-						<p>نسعد بتواصلكم معنا والرد علي استفساراتكم</p>
-						<p>يمكنكم التواصل معنا :هدفنا انشاء جيل واعي</p>
-						<div class="social-icons">
-							<a
-								href="https://www.instagram.com/tlymwtdrysmlmyn?igsh=MWZwbmx0a293eDFzZw=="
-								target="_blank">
-								<i class="fab fa-instagram"></i>
-							</a>
-							<a
-								href="https://wa.me/966541737255"
-								target="_blank">
-								<i class="fab fa-whatsapp"></i>
-							</a>
-						</div>
-					</div>
-					<div class="footer-contact">
-						<h3>بيانات التواصل</h3>
-						<p>
-							<i class="fas fa-map-marker-alt"></i>
-							الرياض، المملكة العربية السعودية
-						</p>
-						<p>
-							<i class="fas fa-phone"></i>
-							966541737255
-						</p>
-						<p>
-							<i class="fas fa-envelope"></i>
-							support@mo3alemon.com
-						</p>
-						<p>
-							<i class="fab fa-whatsapp"></i>
-							966541737255
-						</p>
-					</div>
-					<div class="footer-links">
-						<h3>روابط هامة</h3>
-						<ul type="none">
-							<li>
-								<a href="Articles/html/index10.html">
-									<i class="fas fa-angle-left"></i>
-									فوائد المعلم الخصوصي في المنزل
-								</a>
-							</li>
-							<li>
-								<a href="Articles/html/index6.html">
-									<i class="fas fa-angle-left"></i>
-									أفضل نصيحة لمشكلة توتر الطالبات في اختبارات قياس
-								</a>
-							</li>
-							<li>
-								<a href="Articles/html/index8.html">
-									<i class="fas fa-angle-left"></i>
-									أفضل وسيلة لفهم الرياضيات والتفوق فيها
-								</a>
-							</li>
-							<li>
-								<a href="Articles/html/index9.html">
-									<i class="fas fa-angle-left"></i>
-									مشكلة حفظ الكلمات والجمل والتراكيب في اللغة الإنجليزية
-								</a>
-							</li>
-							<li>
-								<a href="Articles/html/index3.html">
-									<i class="fas fa-angle-left"></i>
-									انشاء جيل واعي
-								</a>
-							</li>
-							<li>
-								<a href="Articles/html/index13.html">
-									<i class="fas fa-angle-left"></i>
-									ما اهمية القدرات اللفظية والكمية ؟
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="footer-articles">
-						<h3>أحدث المقالات</h3>
-						<div class="article">
-							<p>
-								<a href="Articles/html/index10.html">
-									فوائد المعلم الخصوصي في المنزل
-								</a>
-							</p>
-						</div>
-						<div class="article">
-							<p>
-								<a href="Articles/html/index4.html">
-									الفارق بين التعليم الأهلي والتعليم العالمي في السعودية
-								</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="footer-bottom">
-					<p>
-						جميع الحقوق محفوظة &copy; 2025 | مُعلِّمون
-						<span id="currentYear"></span>
-					</p>
-				</div>
-			</div>
-		</footer>
+        .card {
+          max-width: 100%;
+        }
 
-		<script>
-			// إظهار وإخفاء القائمة في الموبايل
-			const toggleButton = document.querySelector(".menu-toggle");
-			const nav = document.querySelector("nav");
+        form {
+          padding: 15px;
+        }
+      }
 
-			toggleButton.addEventListener("click", () => {
-				nav.classList.toggle("active");
-			});
+      /* أنيميشن للقائمة */
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
 
-			// إغلاق القائمة بعد الضغط على أي رابط
-			document.querySelectorAll("nav a").forEach((link) => {
-				link.addEventListener("click", () => {
-					nav.classList.remove("active");
-				});
-			});
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a
+        href="index.html"
+        title="العودة للرئيسية"
+        class="logo"
+        aria-label="شعار معلّمون"
+      >
+        <img src="material/logo.png" alt="شعار معلّمون" />
+      </a>
+      <button class="menu-toggle" aria-label="فتح القائمة">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav aria-label="القائمة الرئيسية">
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="service.html">خدماتنا</a>
+        <a href="blog.html">المدونة</a>
+        <a href="contact_us.html" aria-current="page"> تواصل معنا </a>
+      </nav>
+    </header>
 
-			document
-				.getElementById("contactForm")
-				.addEventListener("submit", function (e) {
-					e.preventDefault();
+    <section class="contact-hero">
+      <div class="container">
+        <h1>تواصل معنا</h1>
+        <p>أرسل لنا استفساراتك أو طلباتك وسنقوم بالرد على أسئلتك</p>
+      </div>
+    </section>
 
-					const progressBar = document.getElementById("progressBar");
-					const progressFill = document.getElementById("progressFill");
+    <section class="contact-info">
+      <div class="container">
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <h3>العنوان</h3>
+            <p>المملكة العربية السعودية، الرياض</p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+            <h3>البريد الإلكتروني</h3>
+            <p>support@mo3alemon.com</p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+            <h3>رقم الهاتف</h3>
+            <p>966541737255</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-					progressBar.style.display = "block";
-					progressFill.style.width = "0%";
+    <section class="contact-form-map">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710200.9405798347!2d42.89153154999999!3d24.7249581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15e7b33fe7952a41%3A0x5960504bc21ab69b!2sSaudi%20Arabia!5e0!3m2!1sen!2sus!4v1620123456789!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
 
-					let progress = 0;
+          <div class="form-container">
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">الاسم</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="ادخل اسمك الكامل"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone">رقم الهاتف</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="ادخل رقم هاتفك"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="ادخل بريدك الإلكتروني"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="subject">الموضوع</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="ادخل موضوع الرسالة"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">الرسالة</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="اكتب رسالتك هنا"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-btn">إرسال</button>
+            </form>
 
-					const interval = setInterval(() => {
-						progress += 10;
-						progressFill.style.width = progress + "%";
+            <!-- Progress Bar -->
+            <div id="progressBar" style="display: none; margin-top: 15px">
+              <p style="margin-bottom: 5px">جارٍ إرسال الرسالة...</p>
+              <div
+                style="background-color: #eee; height: 10px; border-radius: 5px"
+              >
+                <div
+                  id="progressFill"
+                  style="
+                    width: 0%;
+                    height: 100%;
+                    background-color: #4caf50;
+                    border-radius: 5px;
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-						if (progress >= 100) {
-							clearInterval(interval);
-							alert("تم إرسال الرسالة بنجاح!");
-							document.getElementById("contactForm").reset();
-							progressBar.style.display = "none";
-						}
-					}, 100);
-				});
-		</script>
-	</body>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <img
+              src="material/مُعلِّمون.png"
+              alt="شعار مُعلِّمون"
+              class="footer-logo"
+            />
+            <p>
+              يهتم موقع معلمون بكل ما يخص العملية التعليمية فهو يوفر لكم نخبه
+              متميزة من المعلمين والمعلمات في شتى انحاء المملكة أونلاين او يجون
+              البيت من أجلكم
+            </p>
+            <p>نسعد بتواصلكم معنا والرد علي استفساراتكم</p>
+            <p>يمكنكم التواصل معنا :هدفنا انشاء جيل واعي</p>
+            <div class="social-icons">
+              <a
+                href="https://www.instagram.com/tlymwtdrysmlmyn?igsh=MWZwbmx0a293eDFzZw=="
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://wa.me/966541737255" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-contact">
+            <h3>بيانات التواصل</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i>
+              الرياض، المملكة العربية السعودية
+            </p>
+            <p>
+              <i class="fas fa-phone"></i>
+              966541737255
+            </p>
+            <p>
+              <i class="fas fa-envelope"></i>
+              support@mo3alemon.com
+            </p>
+            <p>
+              <i class="fab fa-whatsapp"></i>
+              966541737255
+            </p>
+          </div>
+          <div class="footer-links">
+            <h3>روابط هامة</h3>
+            <ul type="none">
+              <li>
+                <a href="Articles/html/index10.html">
+                  <i class="fas fa-angle-left"></i>
+                  فوائد المعلم الخصوصي في المنزل
+                </a>
+              </li>
+              <li>
+                <a href="Articles/html/index6.html">
+                  <i class="fas fa-angle-left"></i>
+                  أفضل نصيحة لمشكلة توتر الطالبات في اختبارات قياس
+                </a>
+              </li>
+              <li>
+                <a href="Articles/html/index8.html">
+                  <i class="fas fa-angle-left"></i>
+                  أفضل وسيلة لفهم الرياضيات والتفوق فيها
+                </a>
+              </li>
+              <li>
+                <a href="Articles/html/index9.html">
+                  <i class="fas fa-angle-left"></i>
+                  مشكلة حفظ الكلمات والجمل والتراكيب في اللغة الإنجليزية
+                </a>
+              </li>
+              <li>
+                <a href="Articles/html/index3.html">
+                  <i class="fas fa-angle-left"></i>
+                  انشاء جيل واعي
+                </a>
+              </li>
+              <li>
+                <a href="Articles/html/index13.html">
+                  <i class="fas fa-angle-left"></i>
+                  ما اهمية القدرات اللفظية والكمية ؟
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-articles">
+            <h3>أحدث المقالات</h3>
+            <div class="article">
+              <p>
+                <a href="Articles/html/index10.html">
+                  فوائد المعلم الخصوصي في المنزل
+                </a>
+              </p>
+            </div>
+            <div class="article">
+              <p>
+                <a href="Articles/html/index4.html">
+                  الفارق بين التعليم الأهلي والتعليم العالمي في السعودية
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            جميع الحقوق محفوظة &copy; 2025 | مُعلِّمون
+            <span id="currentYear"></span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const toggleButton = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("nav");
+      const header = document.querySelector("header");
+      let lastScrollTop = 0;
+
+      // فتح وإغلاق القائمة
+      toggleButton.addEventListener("click", (e) => {
+        e.stopPropagation();
+        nav.classList.toggle("active");
+
+        // تغيير أيقونة القائمة
+        const icon = toggleButton.querySelector("i");
+        if (nav.classList.contains("active")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
+
+      // إغلاق القائمة عند النقر على الروابط
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("active");
+          const icon = toggleButton.querySelector("i");
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        });
+      });
+
+      // إغلاق القائمة عند النقر خارجها
+      document.addEventListener("click", (e) => {
+        if (!nav.contains(e.target) && !toggleButton.contains(e.target)) {
+          nav.classList.remove("active");
+          const icon = toggleButton.querySelector("i");
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
+
+      // إخفاء وإظهار شريط التنقل عند التمرير
+      window.addEventListener("scroll", () => {
+        let currentScroll =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop && currentScroll > 100) {
+          header.style.top = "-80px"; // إخفاء عند النزول
+        } else {
+          header.style.top = "0"; // إظهار عند الصعود
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+      });
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const progressBar = document.getElementById("progressBar");
+          const progressFill = document.getElementById("progressFill");
+
+          progressBar.style.display = "block";
+          progressFill.style.width = "0%";
+
+          let progress = 0;
+
+          const interval = setInterval(() => {
+            progress += 10;
+            progressFill.style.width = progress + "%";
+
+            if (progress >= 100) {
+              clearInterval(interval);
+              alert("تم إرسال الرسالة بنجاح!");
+              document.getElementById("contactForm").reset();
+              progressBar.style.display = "none";
+            }
+          }, 100);
+        });
+    </script>
+  </body>
 </html>

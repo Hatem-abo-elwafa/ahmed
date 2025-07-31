@@ -1,445 +1,568 @@
 <!DOCTYPE html>
-<html
-	lang="ar"
-	dir="rtl">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="robots"
-			content="index, follow" />
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
 
-		<meta
-			name="msvalidate.01"
-			content="C75C558228E503EBE2740CDF33053FF0" />
-		<meta
-			http-equiv="Content-Security-Policy"
-			content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;" />
-		<meta
-			name="description"
-			content="معلم خصوصي معتمد لجميع المواد الدراسية في السعودية. احجز دروس خصوصية أونلاين أو حضوري في الرياض، جدة، مكة. تعليم قدرات وتحصيلي بأسعار مناسبة." />
+    <meta name="msvalidate.01" content="C75C558228E503EBE2740CDF33053FF0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;"
+    />
+    <meta
+      name="description"
+      content="معلم خصوصي معتمد لجميع المواد الدراسية في السعودية. احجز دروس خصوصية أونلاين أو حضوري في الرياض، جدة، مكة. تعليم قدرات وتحصيلي بأسعار مناسبة."
+    />
 
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0" />
-		<title>مُعلِّمون</title>
-		<meta
-			name="keywords"
-			content="معلم خصوصي , مدرس خصوصي , قدرات وتحصيلي ,معلمون, مقالات تعليمية, استراتيجيات تعليمية, مدرس قدرات أونلاين,أفضل مدرس تحصيلي ,دروس خصوصية عن بُعد,حجز مدرس خصوصي في السعودية" />
-		<link
-			rel="icon"
-			href="images/favicon.ico"
-			type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مُعلِّمون</title>
+    <meta
+      name="keywords"
+      content="معلم خصوصي , مدرس خصوصي , قدرات وتحصيلي ,معلمون, مقالات تعليمية, استراتيجيات تعليمية, مدرس قدرات أونلاين,أفضل مدرس تحصيلي ,دروس خصوصية عن بُعد,حجز مدرس خصوصي في السعودية"
+    />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-		<!-- خطوط وأيقونات -->
-		<link
-			href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap"
-			rel="stylesheet" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- خطوط وأيقونات -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-		<!-- ستايلك الخاص -->
-		<link
-			rel="stylesheet"
-			href="CSS/style.css" />
-		<style>
-			/* تنسيق مؤقت لصندوق البحث والكروت */
-			.search-container {
-				text-align: center;
-				margin: 20px 0;
-			}
-			.no-results {
-				text-align: center;
-				color: #888;
-				margin-top: 10px;
-				display: none;
-			}
+    <!-- ستايلك الخاص -->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <style>
+      /* تنسيق مؤقت لصندوق البحث والكروت */
+      .search-container {
+        text-align: center;
+        margin: 20px 0;
+      }
 
-			.menu-toggle {
-				display: none;
-				background: none;
-				border: none;
-				font-size: 24px;
-				color: white;
-				cursor: pointer;
-			}
+      .no-results {
+        text-align: center;
+        color: #888;
+        margin-top: 10px;
+        display: none;
+      }
 
-			@media (max-width: 768px) {
-				nav {
-					display: none;
-					flex-direction: column;
-					width: 100%;
-					background-color: #00aeef;
-					margin-top: 10px;
-				}
+      @media (max-width: 768px) {
+        header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px 15px;
+        }
 
-				nav.active {
-					display: flex;
-				}
+        .navbar-container {
+          flex-direction: row-reverse;
+          justify-content: space-between;
+        }
 
-				.menu-toggle {
-					display: block;
-				}
+        /* في الشاشات الصغيرة - اللوجو على اليسار */
+        .logo {
+          order: 1;
+          margin-left: 25px;
+          padding-top: 20px;
+        }
 
-				.cards {
-					justify-content: center;
-				}
+        /* زر القائمة على اليمين */
+        .menu-toggle {
+          display: block;
+          order: 2;
+          margin-right: 25px;
+        }
 
-				.card {
-					width: 100%;
-					max-width: 350px;
-				}
+        /* القائمة المخفية */
+        nav {
+          position: fixed;
+          top: 0;
+          left: 0; 
+          right: auto; 
+          width: 250px;
+          height: 100%;
+          background: linear-gradient(135deg, #00aeef 0%, #0092cc 100%);
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          gap: 10px;
+          box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2); 
+          transform: translateX(-100%); 
+          transition: transform 0.3s ease-in-out;
+          z-index: 999;
+        }
 
-				form {
-					width: 100%;
-					max-width: none;
-					padding: 20px;
-				}
-			}
+        nav.active {
+          transform: translateX(0); 
+        }
 
-			@media (max-width: 480px) {
-				.card {
-					max-width: 100%;
-				}
+        nav a {
+          padding: 12px 20px;
+          border-radius: 8px;
+          text-align: center;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
 
-				form {
-					padding: 15px;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<header>
-			<a
-				href="index.html"
-				title="العودة للرئيسية"
-				class="logo"
-				aria-label="شعار معلّمون">
-				<img
-					src="material/logo.png"
-					style="height: 80px; width: 80px"
-					alt="شعار معلّمون" />
-			</a>
-			<button
-				class="menu-toggle"
-				aria-label="فتح القائمة">
-				<i class="fas fa-bars"></i>
-			</button>
-			<nav aria-label="القائمة الرئيسية">
-				<a
-					href="index.html"
-					aria-current="page">
-					الرئيسية
-				</a>
-				<a href="about.html">من نحن</a>
-				<a href="service.html">خدماتنا</a>
-				<a href="blog.html">المدونة</a>
-				<a href="contact_us.html">تواصل معنا</a>
-			</nav>
-		</header>
-		<section class="services">
-			<div class="container">
-				<h1 class="section-title">خدماتنا التعليمية</h1>
-				<div class="services-grid">
-					<!-- بطاقة تمهيدي -->
-					<div class="service-card">
-						<div class="service-icon"><i class="fas fa-user-graduate"></i></div>
-						<h2 class="service-title">تمهيدي</h2>
-						<p class="service-description">
-							معلمة خصوصية لجميع المواد ولكافة المراحل بجميع أنحاء الرياض. اتصل
-							على:
-							<strong>966541737255</strong>
-						</p>
-					</div>
-					<!-- بطاقة متابعة ابتدائي -->
-					<div class="service-card">
-						<div class="service-icon"><i class="fas fa-school"></i></div>
-						<h2 class="service-title">متابعة ابتدائي وانترناشونال</h2>
-						<p class="service-description">
-							نخبة من المعلمين والمعلمات للتدريس الخصوصي بأسعار مناسبة. اتصل
-							الآن:
-							<strong>966541737255</strong>
-						</p>
-					</div>
-					<!-- بطاقة متوسط -->
-					<div class="service-card">
-						<div class="service-icon"><i class="fas fa-book"></i></div>
-						<h2 class="service-title">متوسط</h2>
-						<p class="service-description">
-							متابعة ومراجعة يومية من التمهيدي حتى الجامعي لجميع المناهج (أهلي -
-							حكومي - انترناشونال). الرقم:
-							<strong>966541737255</strong>
-						</p>
-					</div>
-					<!-- بطاقة قدرات وتحصيلي -->
-					<div class="service-card">
-						<div class="service-icon"><i class="fas fa-trophy"></i></div>
-						<h2 class="service-title">قدرات وتحصيلي</h2>
-						<p class="service-description">
-							دروس خصوصية في القدرات العامة والتحصيلي من نخبة معلمين ومعلمات في
-							الرياض. لمزيد من المعلومات:
-							<strong>966541737255</strong>
-						</p>
-					</div>
-					<!-- بطاقة جامعة -->
-					<div class="service-card">
-						<div class="service-icon"><i class="fas fa-university"></i></div>
-						<h2 class="service-title">جامعة</h2>
-						<p class="service-description">
-							أفضل المعلمين والمعلمات لتأسيس ومتابعة طلاب الجامعات في جميع
-							المواد. متاح للبنات فقط. اتصل على:
-							<strong>966541737255</strong>
-						</p>
-					</div>
-					<!-- بطاقة ثانوي -->
-					<div class="service-card">
-						<div class="service-icon">
-							<i class="fas fa-graduation-cap"></i>
-						</div>
-						<h2 class="service-title">ثانوي</h2>
-						<p class="service-description">
-							معلمين ومعلمات لجميع التخصصات (حكومي - أهلي - انترناشونال) بمستوى
-							احترافي وخبرة في التدريس لجميع المراحل.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
+        .services-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
 
-		<div class="search-container">
-			<input
-				type="search"
-				class="search-box"
-				placeholder="ابحث هنا..."
-				aria-label="بحث عن خدماتنا" />
-			<div
-				class="no-results"
-				id="noResults">
-				لا توجد نتائج
-			</div>
-		</div>
+        .service-card {
+          padding: 25px 20px;
+        }
 
-		<section
-			id="articles-container"
-			class="blog-grid"></section>
+        .section-title {
+          font-size: 2rem;
+        }
 
-		<footer class="footer">
-			<div class="container">
-				<div class="footer-content">
-					<div class="footer-about">
-						<a
-							href="index.html"
-							title="العودة للرئيسية"
-							style="display: inline-flex; align-items: center; gap: 8px">
-							<img
-								src="material/مُعلِّمون.png"
-								alt="شعار مُعلِّمون"
-								class="footer-logo"
-								style="height: 50px; object-fit: contain" />
-						</a>
-						<p>
-							يهتم موقع معلمون بكل ما يخص العملية التعليمية فهو يوفر لكم نخبه
-							متميزة من المعلمين والمعلمات في شتى انحاء المملكة أونلاين او يجون
-							البيت من أجلكم
-						</p>
-						<p>نسعد بتواصلكم معنا والرد علي استفساراتكم</p>
-						<p>يمكنكم التواصل معنا : هدفنا انشاء جيل واعي</p>
-						<div class="social-icons">
-							<a
-								href="https://www.instagram.com/tlymwtdrysmlmyn"
-								target="_blank">
-								<i class="fab fa-instagram"></i>
-							</a>
-							<a
-								href="https://wa.me/966541737255"
-								target="_blank">
-								<i class="fab fa-whatsapp"></i>
-							</a>
-						</div>
-					</div>
-					<div class="footer-contact">
-						<h3>بيانات التواصل</h3>
-						<p>
-							<i class="fas fa-map-marker-alt"></i>
-							الرياض، المملكة العربية السعودية
-						</p>
-						<p>
-							<i class="fas fa-phone"></i>
-							966541737255
-						</p>
-						<p>
-							<i class="fas fa-envelope"></i>
-							support@mo3alemon.com
-						</p>
-						<p>
-							<i class="fab fa-whatsapp"></i>
-							966541737255
-						</p>
-					</div>
-					<div class="footer-links">
-						<h3>روابط هامة</h3>
-						<ul type="none">
-							<li>
-								<a href="Articles/html/index10.html">
-									<i class="fas fa-angle-left"></i>
-									فوائد المعلم الخصوصي في المنزل
-								</a>
-							</li>
-							<li>
-								<a href="Articles/html/index6.html">
-									<i class="fas fa-angle-left"></i>
-									أفضل نصيحة لمشكلة توتر الطالبات في اختبارات قياس
-								</a>
-							</li>
-							<li>
-								<a href="Articles/html/index8.html">
-									<i class="fas fa-angle-left"></i>
-									أفضل وسيلة لفهم الرياضيات والتفوق فيها
-								</a>
-							</li>
-							<li>
-								<a href="Articles/html/index9.html">
-									<i class="fas fa-angle-left"></i>
-									مشكلة حفظ الكلمات والجمل والتراكيب في اللغة الإنجليزية
-								</a>
-							</li>
-							<li>
-								<a href="Articles/html/index3.html">
-									<i class="fas fa-angle-left"></i>
-									انشاء جيل واعي
-								</a>
-							</li>
-							<li>
-								<a href="Articles/html/index13.html">
-									<i class="fas fa-angle-left"></i>
-									ما اهمية القدرات اللفظية والكمية ؟
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="footer-articles">
-						<h3>أحدث المقالات</h3>
-						<div class="article">
-							<p>
-								<a href="Articles/html/index10.html">
-									فوائد المعلم الخصوصي في المنزل
-								</a>
-							</p>
-						</div>
-						<div class="article">
-							<p>
-								<a href="Articles/html/index4.html">
-									الفارق بين التعليم الأهلي والتعليم العالمي في السعودية
-								</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="footer-bottom">
-					<p>
-						جميع الحقوق محفوظة &copy; 2025 | مُعلِّمون
-						<span id="currentYear"></span>
-					</p>
-				</div>
-			</div>
-		</footer>
+        .search-box {
+          font-size: 16px;
+          /* منع التكبير في iOS */
+        }
 
-		<div class="l-floating-icons">
-			<a
-				href="https://www.instagram.com/tlymwtdrysmlmyn"
-				class="instagram"
-				target="_blank"
-				title="إنستجرام">
-				<img
-					src="https://cdn-icons-png.flaticon.com/128/6422/6422200.png"
-					alt="Instagram"
-					width="35"
-					height="35" />
-			</a>
-		</div>
-		<div
-			class="r-floating-icons"
-			style="position: fixed; bottom: 20px; right: 20px; z-index: 999">
-			<div
-				style="
-					display: flex;
-					align-items: center;
-					background-color: hsl(203, 100%, 50%);
-					border-radius: 15px;
-					padding: 4px 6px;
-					box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-				">
-				<a
-					href="https://wa.me/966541737255"
-					target="_blank"
-					title="واتس آب"
-					style="display: flex; align-items: center; text-decoration: none">
-					<img
-						src="https://cdn-icons-png.flaticon.com/128/6422/6422213.png"
-						alt="WhatsApp"
-						width="35"
-						height="35" />
-				</a>
-				<div
-					style="
-						margin-right: 8px;
-						font-family: 'Tajawal', sans-serif;
-						font-size: 13px;
-						color: #ffffff;
-					">
-					966541737255
-				</div>
-			</div>
-		</div>
+        .l-floating-icons,
+        .r-floating-icons {
+          bottom: 15px;
+        }
 
-		<!-- سكربتات -->
-		<script
-			src="JS/main.js"
-			defer></script>
-		<script>
-			// إظهار وإخفاء القائمة في الموبايل
-			const toggleButton = document.querySelector(".menu-toggle");
-			const nav = document.querySelector("nav");
+        .l-floating-icons {
+          left: 15px;
+        }
 
-			toggleButton.addEventListener("click", () => {
-				nav.classList.toggle("active");
-			});
+        .r-floating-icons {
+          right: 15px;
+        }
+      }
 
-			// إغلاق القائمة بعد الضغط على أي رابط
-			document.querySelectorAll("nav a").forEach((link) => {
-				link.addEventListener("click", () => {
-					nav.classList.remove("active");
-				});
-			});
+      @media (max-width: 480px) {
+        header {
+          height: 60px;
+          padding: 8px 10px;
+        }
 
-			document.addEventListener("DOMContentLoaded", function () {
-				const searchBox = document.querySelector(".search-box");
-				const cards = document.querySelectorAll(".service-card");
-				const noResults = document.getElementById("noResults");
+        body {
+          padding-top: 60px;
+        }
 
-				searchBox.addEventListener("input", function () {
-					const val = searchBox.value.trim().toLowerCase();
-					let found = false;
+        nav {
+          top: 60px;
+          padding: 15px;
+        }
 
-					cards.forEach((card) => {
-						if (card.textContent.toLowerCase().includes(val)) {
-							card.style.display = "block";
-							found = true;
-						} else {
-							card.style.display = "none";
-						}
-					});
+        .service-card {
+          padding: 20px 15px;
+        }
 
-					noResults.style.display = found ? "none" : "block";
-				});
+        .section-title {
+          font-size: 1.8rem;
+        }
 
-				// للتحديث التلقائي للسنة في الفوتر
-				document.getElementById("currentYear").textContent =
-					new Date().getFullYear();
-			});
-		</script>
-	</body>
+        .services {
+          padding: 30px 15px;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+      }
+
+      /* أنيميشن للقائمة */
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* تحسين النص العربي */
+      .service-description,
+      .footer p,
+      nav a {
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a
+        href="index.html"
+        title="العودة للرئيسية"
+        class="logo"
+        aria-label="شعار معلّمون"
+      >
+        <img src="material/logo.png" alt="شعار معلّمون" />
+      </a>
+      <button class="menu-toggle" aria-label="فتح القائمة">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav aria-label="القائمة الرئيسية">
+        <a href="index.html" aria-current="page"> الرئيسية </a>
+        <a href="about.html">من نحن</a>
+        <a href="service.html">خدماتنا</a>
+        <a href="blog.html">المدونة</a>
+        <a href="contact_us.html">تواصل معنا</a>
+      </nav>
+    </header>
+    <section class="services">
+      <div class="container">
+        <h1 class="section-title">خدماتنا التعليمية</h1>
+        <div class="services-grid">
+          <!-- بطاقة تمهيدي -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-user-graduate"></i></div>
+            <h2 class="service-title">تمهيدي</h2>
+            <p class="service-description">
+              معلمة خصوصية لجميع المواد ولكافة المراحل بجميع أنحاء الرياض. اتصل
+              على:
+              <strong>966541737255</strong>
+            </p>
+          </div>
+          <!-- بطاقة متابعة ابتدائي -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-school"></i></div>
+            <h2 class="service-title">متابعة ابتدائي وانترناشونال</h2>
+            <p class="service-description">
+              نخبة من المعلمين والمعلمات للتدريس الخصوصي بأسعار مناسبة. اتصل
+              الآن:
+              <strong>966541737255</strong>
+            </p>
+          </div>
+          <!-- بطاقة متوسط -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-book"></i></div>
+            <h2 class="service-title">متوسط</h2>
+            <p class="service-description">
+              متابعة ومراجعة يومية من التمهيدي حتى الجامعي لجميع المناهج (أهلي -
+              حكومي - انترناشونال). الرقم:
+              <strong>966541737255</strong>
+            </p>
+          </div>
+          <!-- بطاقة قدرات وتحصيلي -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-trophy"></i></div>
+            <h2 class="service-title">قدرات وتحصيلي</h2>
+            <p class="service-description">
+              دروس خصوصية في القدرات العامة والتحصيلي من نخبة معلمين ومعلمات في
+              الرياض. لمزيد من المعلومات:
+              <strong>966541737255</strong>
+            </p>
+          </div>
+          <!-- بطاقة جامعة -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-university"></i></div>
+            <h2 class="service-title">جامعة</h2>
+            <p class="service-description">
+              أفضل المعلمين والمعلمات لتأسيس ومتابعة طلاب الجامعات في جميع
+              المواد. متاح للبنات فقط. اتصل على:
+              <strong>966541737255</strong>
+            </p>
+          </div>
+          <!-- بطاقة ثانوي -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h2 class="service-title">ثانوي</h2>
+            <p class="service-description">
+              معلمين ومعلمات لجميع التخصصات (حكومي - أهلي - انترناشونال) بمستوى
+              احترافي وخبرة في التدريس لجميع المراحل.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="search-container">
+      <input
+        type="search"
+        class="search-box"
+        placeholder="ابحث هنا..."
+        aria-label="بحث عن خدماتنا"
+      />
+      <div class="no-results" id="noResults">لا توجد نتائج</div>
+    </div>
+
+    <section id="articles-container" class="blog-grid"></section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <a
+              href="index.html"
+              title="العودة للرئيسية"
+              style="display: inline-flex; align-items: center; gap: 8px"
+            >
+              <img
+                src="material/مُعلِّمون.png"
+                alt="شعار مُعلِّمون"
+                class="footer-logo"
+                style="height: 50px; object-fit: contain"
+              />
+            </a>
+            <p>
+              يهتم موقع معلمون بكل ما يخص العملية التعليمية فهو يوفر لكم نخبه
+              متميزة من المعلمين والمعلمات في شتى انحاء المملكة أونلاين او يجون
+              البيت من أجلكم
+            </p>
+            <p>نسعد بتواصلكم معنا والرد علي استفساراتكم</p>
+            <p>يمكنكم التواصل معنا : هدفنا انشاء جيل واعي</p>
+            <div class="social-icons">
+              <a
+                href="https://www.instagram.com/tlymwtdrysmlmyn"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://wa.me/966541737255" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-contact">
+            <h3>بيانات التواصل</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i>
+              الرياض، المملكة العربية السعودية
+            </p>
+            <p>
+              <i class="fas fa-phone"></i>
+              966541737255
+            </p>
+            <p>
+              <i class="fas fa-envelope"></i>
+              support@mo3alemon.com
+            </p>
+            <p>
+              <i class="fab fa-whatsapp"></i>
+              966541737255
+            </p>
+          </div>
+          <div class="footer-links">
+            <h3>روابط هامة</h3>
+            <ul type="none">
+              <li>
+                <a href="Articles/html/index10.html">
+                  <i class="fas fa-angle-left"></i>
+                  فوائد المعلم الخصوصي في المنزل
+                </a>
+              </li>
+              <li>
+                <a href="Articles/html/index6.html">
+                  <i class="fas fa-angle-left"></i>
+                  أفضل نصيحة لمشكلة توتر الطالبات في اختبارات قياس
+                </a>
+              </li>
+              <li>
+                <a href="Articles/html/index8.html">
+                  <i class="fas fa-angle-left"></i>
+                  أفضل وسيلة لفهم الرياضيات والتفوق فيها
+                </a>
+              </li>
+              <li>
+                <a href="Articles/html/index9.html">
+                  <i class="fas fa-angle-left"></i>
+                  مشكلة حفظ الكلمات والجمل والتراكيب في اللغة الإنجليزية
+                </a>
+              </li>
+              <li>
+                <a href="Articles/html/index3.html">
+                  <i class="fas fa-angle-left"></i>
+                  انشاء جيل واعي
+                </a>
+              </li>
+              <li>
+                <a href="Articles/html/index13.html">
+                  <i class="fas fa-angle-left"></i>
+                  ما اهمية القدرات اللفظية والكمية ؟
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-articles">
+            <h3>أحدث المقالات</h3>
+            <div class="article">
+              <p>
+                <a href="Articles/html/index10.html">
+                  فوائد المعلم الخصوصي في المنزل
+                </a>
+              </p>
+            </div>
+            <div class="article">
+              <p>
+                <a href="Articles/html/index4.html">
+                  الفارق بين التعليم الأهلي والتعليم العالمي في السعودية
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            جميع الحقوق محفوظة &copy; 2025 | مُعلِّمون
+            <span id="currentYear"></span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="l-floating-icons">
+      <a
+        href="https://www.instagram.com/tlymwtdrysmlmyn"
+        class="instagram"
+        target="_blank"
+        title="إنستجرام"
+      >
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/6422/6422200.png"
+          alt="Instagram"
+          width="35"
+          height="35"
+        />
+      </a>
+    </div>
+    <div
+      class="r-floating-icons"
+      style="position: fixed; bottom: 20px; right: 20px; z-index: 999"
+    >
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          background-color: hsl(203, 100%, 50%);
+          border-radius: 15px;
+          padding: 4px 6px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <a
+          href="https://wa.me/966541737255"
+          target="_blank"
+          title="واتس آب"
+          style="display: flex; align-items: center; text-decoration: none"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/6422/6422213.png"
+            alt="WhatsApp"
+            width="35"
+            height="35"
+          />
+        </a>
+        <div
+          style="
+            margin-right: 8px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 13px;
+            color: #ffffff;
+          "
+        >
+          966541737255
+        </div>
+      </div>
+    </div>
+
+    <script src="JS/main.js" defer></script>
+    <script>
+      const toggleButton = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("nav");
+      const header = document.querySelector("header");
+      let lastScrollTop = 0;
+
+      // فتح وإغلاق القائمة
+      toggleButton.addEventListener("click", (e) => {
+        e.stopPropagation();
+        nav.classList.toggle("active");
+
+        // تغيير أيقونة القائمة
+        const icon = toggleButton.querySelector("i");
+        if (nav.classList.contains("active")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
+
+      // إغلاق القائمة عند النقر على الروابط
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("active");
+          const icon = toggleButton.querySelector("i");
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        });
+      });
+
+      // إغلاق القائمة عند النقر خارجها
+      document.addEventListener("click", (e) => {
+        if (!nav.contains(e.target) && !toggleButton.contains(e.target)) {
+          nav.classList.remove("active");
+          const icon = toggleButton.querySelector("i");
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
+
+      // إخفاء وإظهار شريط التنقل عند التمرير
+      window.addEventListener("scroll", () => {
+        let currentScroll =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop && currentScroll > 100) {
+          header.style.top = "-80px"; // إخفاء عند النزول
+        } else {
+          header.style.top = "0"; // إظهار عند الصعود
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+      });
+
+      // وظيفة البحث المحسنة
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchBox = document.querySelector(".search-box");
+        const cards = document.querySelectorAll(".service-card");
+        const noResults = document.getElementById("noResults");
+
+        searchBox.addEventListener("input", function () {
+          const searchTerm = searchBox.value.trim().toLowerCase();
+          let foundResults = 0;
+
+          cards.forEach((card) => {
+            const cardText = card.textContent.toLowerCase();
+
+            if (cardText.includes(searchTerm)) {
+              card.style.display = "block";
+              foundResults++;
+            } else {
+              card.style.display = "none";
+            }
+          });
+
+          if (foundResults === 0) {
+            noResults.style.display = "block";
+          } else {
+            noResults.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

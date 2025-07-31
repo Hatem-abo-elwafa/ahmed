@@ -39,33 +39,68 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="[NEW_AND_CORRECT_HASH]" crossorigin="anonymous">
 
+			<link rel="stylesheet" href="responsive.css">
+
 			<style>
-				
-     .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 24px;
-      color: white;
-      cursor: pointer;
-    }
 
       @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #00aeef;
-        margin-top: 10px;
-      }
+        header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px 15px;
+        }
 
-      nav.active {
-        display: flex;
-      }
+        .navbar-container {
+          flex-direction: row-reverse;
+          justify-content: space-between;
+        }
 
-      .menu-toggle {
-        display: block;
-      }
+        /* في الشاشات الصغيرة - اللوجو على اليسار */
+        .logo {
+          order: 1;
+          margin-left: 25px;
+          padding-top: 20px;
+        }
+
+        /* زر القائمة على اليمين */
+        .menu-toggle {
+          display: block;
+          order: 2;
+          margin-right: 25px;
+        }
+
+        /* القائمة المخفية */
+        nav {
+          position: fixed;
+          top: 0;
+          left: 0; 
+          right: auto; 
+          width: 250px;
+          height: 100%;
+          background: linear-gradient(135deg, #00aeef 0%, #0092cc 100%);
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          gap: 10px;
+          box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2); 
+          transform: translateX(-100%); 
+          transition: transform 0.3s ease-in-out;
+          z-index: 999;
+        }
+
+        nav.active {
+          transform: translateX(0); 
+        }
+
+        nav a {
+          padding: 12px 20px;
+          border-radius: 8px;
+          text-align: center;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
 
       .cards {
         justify-content: center;
@@ -84,6 +119,20 @@
     }
 
     @media (max-width: 480px) {
+		header {
+          height: 60px;
+          padding: 8px 10px;
+        }
+
+        body {
+          padding-top: 60px;
+        }
+
+        nav {
+          top: 60px;
+          padding: 15px;
+        }
+
       .card {
         max-width: 100%;
       }
@@ -92,12 +141,25 @@
         padding: 15px;
       }
     }
-			</style>
+
+	/* أنيميشن للقائمة */
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+	</style>
 	</head>
 	<body>
 	  <header>
     <a href="index.html" title="العودة للرئيسية" class="logo" aria-label="شعار معلّمون">
-      <img src="material/logo.png" style="height: 80px; width: 80px; " alt="شعار معلّمون" />
+      <img src="material/logo.png" alt="شعار معلّمون " alt="شعار معلّمون" />
     </a>
     <button class="menu-toggle" aria-label="فتح القائمة">
       <i class="fas fa-bars"></i>
@@ -274,20 +336,62 @@
 			defer></script>
 
 			<script>
-				   // إظهار وإخفاء القائمة في الموبايل
-    const toggleButton = document.querySelector(".menu-toggle");
-    const nav = document.querySelector("nav");
 
-    toggleButton.addEventListener("click", () => {
-      nav.classList.toggle("active");
-    });
+	const toggleButton = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("nav");
+      const header = document.querySelector("header");
+      let lastScrollTop = 0;
 
-    // إغلاق القائمة بعد الضغط على أي رابط
-    document.querySelectorAll("nav a").forEach(link => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("active");
+      // فتح وإغلاق القائمة
+      toggleButton.addEventListener("click", (e) => {
+        e.stopPropagation();
+        nav.classList.toggle("active");
+
+        // تغيير أيقونة القائمة
+        const icon = toggleButton.querySelector("i");
+        if (nav.classList.contains("active")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
       });
-    });
-			</script>
+
+      // إغلاق القائمة عند النقر على الروابط
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("active");
+          const icon = toggleButton.querySelector("i");
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        });
+      });
+
+      // إغلاق القائمة عند النقر خارجها
+      document.addEventListener("click", (e) => {
+        if (!nav.contains(e.target) && !toggleButton.contains(e.target)) {
+          nav.classList.remove("active");
+          const icon = toggleButton.querySelector("i");
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
+
+      // إخفاء وإظهار شريط التنقل عند التمرير
+      window.addEventListener("scroll", () => {
+        let currentScroll =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop && currentScroll > 100) {
+          header.style.top = "-80px"; // إخفاء عند النزول
+        } else {
+          header.style.top = "0"; // إظهار عند الصعود
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+      });
+
+	</script>
 	</body>
 </html>
