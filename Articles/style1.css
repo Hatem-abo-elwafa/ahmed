@@ -32,14 +32,10 @@ header.navigation-header {
 	justify-content: center;
 	align-items: center;
 }
-.article-header_1  {
+.article-header-1  {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #4cb2f6;
-}
-.article-header_1 h1 {
-	color: #fff;
 }
 
 .dark-mode header {
