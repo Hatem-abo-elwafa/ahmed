@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mo3alemon.com/sitemap.xml

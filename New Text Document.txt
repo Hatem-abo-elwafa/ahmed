@@ -1,0 +1,78 @@
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "EducationalOrganization",
+				"name": "Mo3alemon",
+				"alternateName": "معلمون",
+				"description": "منصة رائدة لحجز مدرسين خصوصيين في المملكة العربية السعودية لجميع المواد والمراحل التعليمية",
+				"url": "https://mo3alemon.com",
+				"logo": "https://mo3alemon.com/logo.png",
+				"foundingDate": "2023",
+				"founder": {
+					"@type": "Person",
+					"name": "حاتم أبو الوفا"
+				},
+
+				"address": {
+					"@type": "PostalAddress",
+					"addressCountry": "SA",
+					"addressRegion": "الرياض",
+					"postalCode": "12345",
+					"streetAddress": "شارع الملك فهد"
+				},
+
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"telephone": "+966501234567",
+					"contactType": "customer service",
+					"email": "info@mo3alemon.com",
+					"availableLanguage": ["Arabic", "English"]
+				},
+
+				"sameAs": [
+					"https://www.instagram.com/tlymwtdrysmlmyn/#"
+				],
+
+				"hasOfferCatalog": {
+					"@type": "OfferCatalog",
+					"name": "خدمات التدريس",
+					"itemListElement": [
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Service",
+								"name": "دروس خصوصية في الرياضيات",
+								"description": "حجز مدرس رياضيات متخصص لجميع المراحل الدراسية",
+								"serviceType": "تعليم خصوصي",
+								"provider": {
+									"@type": "Person",
+									"name": "مدرس رياضيات معتمد"
+								},
+								"areaServed": ["الرياض", "جدة", "الدمام"],
+								"price": "100",
+								"priceCurrency": "SAR"
+							}
+						},
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Service",
+								"name": "دروس اللغة الإنجليزية",
+								"description": "تعليم محادثة وقواعد اللغة الإنجليزية بطرق حديثة",
+								"serviceType": "تعليم لغات",
+								"provider": {
+									"@type": "Person",
+									"name": "مدرس لغة إنجليزية معتمد"
+								}
+							}
+						}
+					]
+				},
+
+				"potentialAction": {
+					"@type": "SearchAction",
+					"target": "https://mo3alemon.com/search?q={search_term_string}",
+					"query-input": "required name=search_term_string"
+				}
+			}
+		</script>

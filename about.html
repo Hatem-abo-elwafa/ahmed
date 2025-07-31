@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html
+	lang="ar"
+	dir="rtl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content="خدمات توفير معلمين خصوصيين متخصصين في جميع المواد التعليمية بمستوى عالي من الجودة" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>توفير معلمين خصوصيين - دعم تعليمي متخصص</title>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="stylesheet"
+			href="CSS/style.css" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="preconnect"
+			href="https://cdnjs.cloudflare.com" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<meta
+			name="description"
+			content="مدونة تعليمية متخصصة للمعلمين تحتوي على مقالات واستراتيجيات تعليمية حديثة" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="
+				default-src 'self';
+				script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+				style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+				img-src 'self' data: https://*.placeholder.com https://*.icons8.com https://*.flaticon.com;
+				font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+				connect-src 'self';
+		" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+		<style>
+			/* الأساسيات المحسنة */
+			:root {
+				--primary-color: #00aeef; /* اللون الرئيسي الأزرق السماوي */
+				--secondary-color: #0077a3; /* لون ثانوي أزرق داكن */
+				--light-bg: #f2f2f2; /* لون خلفية خفيف */
+				--text-color: #333333; /* لون النص */
+				--white: #ffffff; /* أبيض */
+				--shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ظل ناعم */
+				--transition: all 0.3s ease-in-out;
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				font-family: "Tajawal", sans-serif;
+				margin: 0;
+				padding: 0;
+				background-color: #ffffff;
+				color: #333333;
+				line-height: 1.6;
+			}
+
+			/* تحسينات الهيدر */
+			header {
+				background-color: #00aeef;
+				padding: 1rem 2rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				position: sticky;
+				top: 0;
+				z-index: 1000;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+			}
+
+			header .logo {
+				font-size: 1.8rem;
+				font-weight: bold;
+				color: #ffffff;
+				text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+			}
+
+			nav {
+				display: flex;
+			}
+
+			nav a {
+				color: #ffffff;
+				margin: 0 1rem;
+				text-decoration: none;
+				font-weight: bold;
+				padding: 0.5rem 1rem;
+				border-radius: 4px;
+				transition: all 0.3s ease;
+			}
+
+			nav a:hover {
+				background-color: rgba(255, 255, 255, 0.2);
+				text-decoration: none;
+			}
+			nav a:focus {
+				background-color: rgba(255, 255, 255, 0.2);
+				outline: none;
+			}
+
+			nav a[aria-current="page"] {
+				background-color: rgba(255, 255, 255, 0.3);
+			}
+
+			/* المحتوى الرئيسي المحسن */
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 2rem;
+			}
+
+			.hero {
+				text-align: center;
+				margin-bottom: 3rem;
+				animation: fadeIn 1s ease-out;
+			}
+
+			.hero h1 {
+				font-size: 2.5rem;
+				color: var(--primary-color);
+				margin-bottom: 1.5rem;
+				line-height: 1.3;
+			}
+
+			.hero p {
+				max-width: 800px;
+				margin: 0 auto 2rem;
+				font-size: 1.1rem;
+			}
+
+			/* تحسينات بطاقات المميزات */
+			.features-section {
+				margin: 4rem 0;
+			}
+
+			.section-title {
+				text-align: center;
+				color: var(--primary-color);
+				margin-bottom: 3rem;
+				position: relative;
+				font-size: 2rem;
+			}
+
+			.section-title::after {
+				content: "";
+				display: block;
+				width: 80px;
+				height: 4px;
+				background: var(--primary-color);
+				margin: 1rem auto 0;
+				border-radius: 2px;
+			}
+
+			.features-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 2rem;
+			}
+
+			.feature-card {
+				background: var(--white);
+				border-radius: 10px;
+				box-shadow: var(--shadow);
+				padding: 2rem;
+				transition: var(--transition);
+				border: 1px solid rgba(0, 0, 0, 0.05);
+				position: relative;
+				overflow: hidden;
+			}
+
+			.feature-card::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 4px;
+				height: 0;
+				background: var(--primary-color);
+				transition: height 0.3s ease;
+			}
+
+			.feature-card:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+			}
+
+			.feature-card:hover::before {
+				height: 100%;
+			}
+
+			.feature-card h3 {
+				color: var(--primary-color);
+				font-size: 1.4rem;
+				margin-bottom: 1rem;
+				position: relative;
+				padding-right: 1.5rem;
+			}
+
+			.feature-card h3::before {
+				content: "•";
+				position: absolute;
+				right: 0;
+				color: var(--secondary-color);
+			}
+
+			/* تحسينات الجدول */
+			.table-container {
+				margin: 4rem 0;
+				overflow-x: auto;
+				border-radius: 10px;
+				box-shadow: var(--shadow);
+				background: var(--white);
+				padding: 1rem;
+			}
+
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				min-width: 600px;
+			}
+
+			table th {
+				background-color: var(--primary-color);
+				color: var(--white);
+				padding: 1.2rem;
+				text-align: center;
+				font-weight: 700;
+			}
+
+			table td {
+				padding: 1.2rem;
+				border-bottom: 1px solid #eee;
+				text-align: center;
+				transition: var(--transition);
+			}
+
+			table tr:last-child td {
+				border-bottom: none;
+			}
+
+			table tr:nth-child(even) {
+				background-color: #f9f9f9;
+			}
+
+			table tr:hover td {
+				background-color: var(--light-bg);
+			}
+
+			/* تحسينات قسم الفوائد */
+			.benefits-section {
+				background-color: var(--light-bg);
+				padding: 3rem;
+				border-radius: 10px;
+				margin: 4rem 0;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.benefits-section::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 5px;
+				height: 100%;
+				background: var(--primary-color);
+			}
+
+			.benefits-list {
+				list-style: none;
+				max-width: 800px;
+				margin: 0 auto;
+			}
+
+			.benefits-list li {
+				margin-bottom: 1.5rem;
+				position: relative;
+				padding-right: 2.5rem;
+				font-size: 1.1rem;
+			}
+
+			.benefits-list li::before {
+				content: "✓";
+				position: absolute;
+				right: 0;
+				top: 0;
+				color: var(--secondary-color);
+				font-weight: bold;
+				font-size: 1.5rem;
+			}
+
+			/* تحسينات قسم الاتصال */
+			.contact-section {
+				background-color: var(--primary-color);
+				color: var(--white);
+				padding: 3rem;
+				border-radius: 10px;
+				text-align: center;
+				margin: 4rem 0;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.contact-section::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 5px;
+				background: var(--secondary-color);
+			}
+
+			.contact-section h2 {
+				margin-bottom: 1.5rem;
+				color: var(--white);
+			}
+
+			.contact-info {
+				margin-bottom: 1.5rem;
+			}
+
+			.contact-info p {
+				margin-bottom: 0.5rem;
+			}
+
+			.btn {
+				display: inline-block;
+				background-color: var(--secondary-color);
+				color: var(--white);
+				padding: 0.8rem 2rem;
+				border-radius: 30px;
+				text-decoration: none;
+				font-weight: 700;
+				transition: var(--transition);
+				border: 2px solid transparent;
+				font-size: 1.1rem;
+				cursor: pointer;
+			}
+
+			.btn:hover,
+			.btn:focus {
+				background-color: transparent;
+				border-color: var(--white);
+				transform: translateY(-3px);
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+			}
+
+			/* تحسينات الفوتر */
+			footer {
+				background-color: #222;
+				color: #aaa;
+				text-align: center;
+				padding: 2rem;
+				margin-top: 4rem;
+			}
+
+			/* الأيقونات العائمة */
+			.r-floating-icons {
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+				z-index: 999;
+			}
+			.l-floating-icons {
+				position: fixed;
+				bottom: 20px;
+				left: 20px;
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+				z-index: 999;
+			}
+
+			.r-floating-icons a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background-color: #00aeef;
+				color: white;
+				text-decoration: none;
+				transition: all 0.3s ease;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+			}
+
+			.r-floating-icons a:hover {
+				background-color: #0077a3;
+				transform: scale(1.1);
+			}
+
+			.r-floating-icons img {
+				width: 35px;
+				height: 35px;
+			}
+			.l-floating-icons a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background-color: #00aeef;
+				color: white;
+				text-decoration: none;
+				transition: all 0.3s ease;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+			}
+
+			.l-floating-icons a:hover {
+				background-color: #0077a3;
+				transform: scale(1.1);
+			}
+
+			.l-floating-icons img {
+				width: 35px;
+				height: 35px;
+			}
+			/* تحسينات للجوال */
+			@media (max-width: 768px) {
+				header {
+					flex-direction: column;
+					padding: 1rem;
+					gap: 1rem;
+				}
+
+				nav {
+					flex-wrap: wrap;
+					justify-content: center;
+				}
+
+				.hero h1 {
+					font-size: 2rem;
+				}
+
+				.section-title {
+					font-size: 1.8rem;
+				}
+
+				.features-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.benefits-section,
+				.contact-section {
+					padding: 2rem 1rem;
+				}
+
+				.floating-buttons {
+					bottom: 1rem;
+					left: 1rem;
+				}
+			}
+
+			/* تأثيرات حركية */
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+					transform: translateY(20px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			.animate {
+				animation: fadeIn 0.8s ease-out forwards;
+			}
+
+			.delay-1 {
+				animation-delay: 0.2s;
+			}
+			.delay-2 {
+				animation-delay: 0.4s;
+			}
+			.delay-3 {
+				animation-delay: 0.6s;
+			}
+
+			 .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+
+      @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #00aeef;
+        margin-top: 10px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .cards {
+        justify-content: center;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 350px;
+      }
+
+      form {
+        width: 100%;
+        max-width: none;
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        max-width: 100%;
+      }
+
+      form {
+        padding: 15px;
+      }
+    }
+		</style>
+	</head>
+	<body>
+	  <header>
+    <a href="index.html" title="العودة للرئيسية" class="logo" aria-label="شعار معلّمون">
+      <img src="material/logo.png" style="height: 80px; width: 80px; " alt="شعار معلّمون" />
+    </a>
+    <button class="menu-toggle" aria-label="فتح القائمة">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav aria-label="القائمة الرئيسية">
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html" aria-current="page">من نحن</a>
+      <a href="service.html">خدماتنا</a>
+      <a href="blog.html">المدونة</a>
+      <a href="contact_us.html" >تواصل معنا</a>
+    </nav>
+  </header>
+
+
+		<main class="container">
+			<section class="hero">
+				<h1 class="animate">
+					توفير معلمين خصوصيين: دعم تعليمي متخصص لتحقيق التميز
+				</h1>
+				<p class="animate delay-1">
+					نقدم في مدونة المعلم خدمات تعليمية متميزة عبر
+					<strong>توفير معلمين خصوصيين متخصصين</strong>
+					في مختلف المجالات، بهدف دعم الطلاب ومساعدتهم على تحقيق أهدافهم
+					الأكاديمية والمهنية بثقة وكفاءة.
+				</p>
+			</section>
+
+			<section class="features-section">
+				<h2 class="section-title animate delay-1">لماذا نتميز؟</h2>
+				<div class="features-grid">
+					<div class="feature-card animate delay-1">
+						<h3>معلمون خبراء</h3>
+						<p>
+							فريق من المعلمين المؤهلين في تخصصات دقيقة، يقدمون شرحًا مبسطًا
+							وشاملًا مع سنوات من الخبرة في المجال التعليمي.
+						</p>
+					</div>
+					<div class="feature-card animate delay-1">
+						<h3>خطط دراسية مخصصة</h3>
+						<p>
+							نصنع خطة تعليمية تناسب مستوى كل طالب وأهدافه بناءً على تقييم دقيق
+							لمهاراته واحتياجاته.
+						</p>
+					</div>
+					<div class="feature-card animate delay-2">
+						<h3>مرونة زمنية</h3>
+						<p>
+							اختيار أوقات الدروس بما يتناسب مع جدول الطالب مع إمكانية تعديل
+							المواعيد حسب الحاجة.
+						</p>
+					</div>
+					<div class="feature-card animate delay-2">
+						<h3>متابعة وتقييم</h3>
+						<p>
+							تقارير دورية وتغذية راجعة لقياس التقدم وتحسين الأداء مع نصائح
+							مخصصة للتحسين.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title animate delay-2">مجالاتنا التعليمية</h2>
+				<div class="table-container animate delay-2">
+					<table>
+						<thead>
+							<tr>
+								<th>التخصص</th>
+								<th>يشمل</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><strong>الرياضيات</strong></td>
+								<td>
+									الجبر، الهندسة، التفاضل والتكامل، الإحصاء، الرياضيات المتقدمة
+								</td>
+							</tr>
+							<tr>
+								<td><strong>العلوم</strong></td>
+								<td>فيزياء، كيمياء، أحياء، علوم عامة، تطبيقات علمية</td>
+							</tr>
+							<tr>
+								<td><strong>اللغة الإنجليزية</strong></td>
+								<td>
+									قراءة، كتابة، محادثة، تحضير لاختبارات دولية (IELTS, TOEFL)
+								</td>
+							</tr>
+							<tr>
+								<td><strong>القدرات والتحصيلي</strong></td>
+								<td>
+									تأهيل شامل لاختبارات القبول الجامعية، تدريبات مكثفة، نماذج
+									اختبارات
+								</td>
+							</tr>
+							<tr>
+								<td><strong>مواد أخرى</strong></td>
+								<td>حسب احتياج الطالب (تاريخ، جغرافيا، لغات، برمجة، إلخ)</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<section class="benefits-section animate delay-3">
+				<h2 class="section-title">فوائد التعليم معنا</h2>
+				<ul class="benefits-list">
+					<li>
+						<strong>تحصيل علمي أسرع</strong>
+						بفضل شرح مخصص يركز على نقاط الضعف مع استخدام استراتيجيات تعليمية
+						فعالة
+					</li>
+					<li>
+						<strong>تعزيز الثقة بالنفس</strong>
+						عبر حل المشكلات التعليمية بشكل منهجي وبناء المهارات الأساسية
+					</li>
+					<li>
+						<strong>تحقيق أعلى الدرجات</strong>
+						في الاختبارات المدرسية أو الوطنية مع تدريبات مستمرة على نماذج
+						الاختبارات
+					</li>
+					<li>
+						<strong>تعلم مهارات التنظيم والاستذكار</strong>
+						لبناء عادات دراسية ناجحة تدوم مدى الحياة
+					</li>
+					<li>
+						<strong>دعم أكاديمي متكامل</strong>
+						يشمل التوجيه الدراسي واختيار التخصصات المناسبة
+					</li>
+				</ul>
+			</section>
+
+			<section class="contact-section animate delay-3">
+				<h2>تواصل معنا اليوم!</h2>
+				<div class="contact-info">
+					<p><strong>هل ترغب في دعم تعليمي فعّال لابنك أو ابنتك؟</strong></p>
+					<p><strong>لا تتردد في التواصل مع فريقنا المتخصص!</strong></p>
+				</div>
+				<div class="contact-details">
+					<p>
+						<i class="fas fa-phone"></i>
+						<strong>الهاتف:</strong>
+						966541737255
+					</p>
+					<p>
+						<i class="fas fa-envelope"></i>
+						<strong>البريد الإلكتروني:</strong>
+						support@mo3alemon.com
+					</p>
+					<p>
+						<i class="fas fa-globe"></i>
+						<strong>الموقع الإلكتروني:</strong>
+						www.mo3alemon.com
+					</p>
+				</div>
+				<br />
+				<a
+					href="https://wa.me/966541737255"
+					target="_blank"
+					class="btn">
+					احجز معلمك الآن
+				</a>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-about">
+						<img
+							src="material/مُعلِّمون.png"
+							alt="شعار مُعلِّمون"
+							class="footer-logo" />
+						<p>
+							يهتم موقع معلمون بكل ما يخص العملية التعليمية فهو يوفر لكم نخبه
+							متميزة من المعلمين والمعلمات في شتى انحاء المملكة أونلاين او يجون
+							البيت من أجلكم
+						</p>
+						<p>نسعد بتواصلكم معنا والرد علي استفساراتكم</p>
+						<p>يمكنكم التواصل معنا :هدفنا انشاء جيل واعي</p>
+						<div class="social-icons">
+							<a
+								href="https://www.instagram.com/tlymwtdrysmlmyn?igsh=MWZwbmx0a293eDFzZw=="
+								target="_blank">
+								<i class="fab fa-instagram"></i>
+							</a>
+							<a
+								href="https://wa.me/966541737255"
+								target="_blank">
+								<i class="fab fa-whatsapp"></i>
+							</a>
+						</div>
+					</div>
+					<div class="footer-contact">
+						<h3>بيانات التواصل</h3>
+						<p>
+							<i class="fas fa-map-marker-alt"></i>
+							الرياض، المملكة العربية السعودية
+						</p>
+						<p>
+							<i class="fas fa-phone"></i>
+							966541737255
+						</p>
+						<p>
+							<i class="fas fa-envelope"></i>
+							support@mo3alemon.com
+						</p>
+						<p>
+							<i class="fab fa-whatsapp"></i>
+							966541737255
+						</p>
+					</div>
+					<div class="footer-links">
+						<h3>روابط هامة</h3>
+						<ul type="none">
+							<li>
+								<a href="Articles/html/index10.html">
+									<i class="fas fa-angle-left"></i>
+									فوائد المعلم الخصوصي في المنزل
+								</a>
+							</li>
+							<li>
+								<a href="Articles/html/index6.html">
+									<i class="fas fa-angle-left"></i>
+									أفضل نصيحة لمشكلة توتر الطالبات في اختبارات قياس
+								</a>
+							</li>
+							<li>
+								<a href="Articles/html/index8.html">
+									<i class="fas fa-angle-left"></i>
+									أفضل وسيلة لفهم الرياضيات والتفوق فيها
+								</a>
+							</li>
+							<li>
+								<a href="Articles/html/index9.html">
+									<i class="fas fa-angle-left"></i>
+									مشكلة حفظ الكلمات والجمل والتراكيب في اللغة الإنجليزية
+								</a>
+							</li>
+							<li>
+								<a href="Articles/html/index3.html">
+									<i class="fas fa-angle-left"></i>
+									انشاء جيل واعي
+								</a>
+							</li>
+							<li>
+								<a href="Articles/html/index13.html">
+									<i class="fas fa-angle-left"></i>
+									ما اهمية القدرات اللفظية والكمية ؟
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-articles">
+						<h3>أحدث المقالات</h3>
+						<div class="article">
+							<p>
+								<a href="Articles/html/index10.html">
+									فوائد المعلم الخصوصي في المنزل
+								</a>
+							</p>
+						</div>
+						<div class="article">
+							<p>
+								<a href="Articles/html/index4.html">
+									الفارق بين التعليم الأهلي والتعليم العالمي في السعودية
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p>
+						جميع الحقوق محفوظة &copy; 2025 | مُعلِّمون
+						<span id="currentYear"></span>
+					</p>
+				</div>
+			</div>
+		</footer>
+
+	 <div class="r-floating-icons" style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">
+	<div style="display: flex; align-items: center; background-color: hsl(203, 100%, 50%); border-radius: 15px; padding: 4px 6px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+	  <a href="https://wa.me/966541737255" target="_blank" title="واتس آب" style="display: flex; align-items: center; text-decoration: none;">
+		<img src="https://cdn-icons-png.flaticon.com/128/6422/6422213.png" alt="WhatsApp" width="35" height="35" />
+	  </a>
+	  <div style="margin-right: 8px; font-family: 'Tajawal', sans-serif; font-size: 13px; color: #ffffff;">
+		966541737255
+	  </div>
+	</div>
+  </div>
+			<div class="l-floating-icons">
+				<a
+					href="https://www.instagram.com/tlymwtdrysmlmyn"
+					class="floating-btn"
+					target="_blank"
+					aria-label="تابعنا على إنستجرام">
+					<img
+						src="https://cdn-icons-png.flaticon.com/128/6422/6422200.png"
+						alt="إنستجرام"
+						width="24"
+						height="24" />
+				</a>
+			</div>
+		</div>
+
+		<script>
+ // إظهار وإخفاء القائمة في الموبايل
+    const toggleButton = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("nav");
+
+    toggleButton.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
+    // إغلاق القائمة بعد الضغط على أي رابط
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("active");
+      });
+    });
+
+			document.getElementById("currentYear").textContent =
+				new Date().getFullYear();
+			const animateElements = document.querySelectorAll(".animate");
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.style.opacity = 1;
+							entry.target.style.transform = "translateY(0)";
+						}
+					});
+				},
+				{ threshold: 0.1 }
+			);
+			animateElements.forEach((el) => {
+				el.style.opacity = 0;
+				el.style.transform = "translateY(20px)";
+				el.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+				observer.observe(el);
+			});
+		</script>
+	</body>
+</html>

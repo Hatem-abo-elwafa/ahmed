@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html
+	lang="ar"
+	dir="rtl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="
+    default-src 'self';
+    script-src 'self' https://cdnjs.cloudflare.com https://html2canvas.hertzen.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    img-src 'self' data: https://via.placeholder.com https://cdn-icons-png.flaticon.com;
+    font-src 'self' https://fonts.gstatic.com;
+    connect-src 'self';
+    frame-src 'none';
+    object-src 'none';
+		" />
+		<meta
+			name="author"
+			content="اسم المؤلف" />
+		<meta
+			name="keywords"
+			content="تعليم, تدريس, معلمين, تعلم فعال, تقنيات التعليم" />
+		<meta
+			property="og:type"
+			content="article" />
+		<meta
+			property="article:published_time"
+			content="2023-10-15" />
+		<meta
+			property="article:author"
+			content="اسم المؤلف" />
+		<meta
+			property="article:section"
+			content="التعليم" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1" />
+		<title>لماذا تحرص الدول والمجتمعات على التعليم؟</title>
+		<meta
+			name="description"
+			content="مقال عن أهمية التعليم في بناء المجتمعات وتطور الدول" />
+		<meta
+			property="og:title"
+			content="لماذا تحرص الدول والمجتمعات على التعليم؟" />
+		<meta
+			property="og:description"
+			content="مقال يتناول أهمية التعليم في بناء المستقبل" />
+		<meta
+			property="og:image"
+			content="https://via.placeholder.com/800x400?text=التعليم" />
+		<meta
+			name="twitter:card"
+			content="summary_large_image" />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cairo&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<link
+			rel="stylesheet"
+			href="../style1.css" />
+		<style>
+			body {
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				line-height: 1.8;
+				color: #333;
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 20px;
+				background-color: #f9f9f9;
+			}
+
+			.article-container {
+				background: white;
+				padding: 40px;
+				border-radius: 10px;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+			}
+
+			h1 {
+				color: #2c3e50;
+				font-size: 2.5em;
+				margin-bottom: 20px;
+				text-align: center;
+				border-bottom: 3px solid #3498db;
+				padding-bottom: 15px;
+			}
+
+			h2 {
+				color: #34495e;
+				font-size: 1.8em;
+				margin-top: 30px;
+				margin-bottom: 15px;
+				border-right: 4px solid #3498db;
+				padding-right: 15px;
+			}
+
+			h3 {
+				color: #2980b9;
+				font-size: 1.4em;
+				margin-top: 25px;
+				margin-bottom: 10px;
+			}
+
+			p {
+				margin-bottom: 15px;
+				text-align: justify;
+			}
+
+			.highlight-box {
+				background: #ecf0f1;
+				border-right: 4px solid #3498db;
+				padding: 20px;
+				margin: 20px 0;
+				border-radius: 5px;
+			}
+
+			.review-box {
+				background: #f8f9fa;
+				border: 2px solid #e9ecef;
+				padding: 20px;
+				margin: 20px 0;
+				border-radius: 10px;
+			}
+
+			.rating {
+				color: #f39c12;
+				font-size: 1.2em;
+				margin-bottom: 10px;
+			}
+
+			.child-friendly-box {
+				background: #e8f4fd;
+				border: 2px solid #3498db;
+				padding: 20px;
+				margin: 20px 0;
+				border-radius: 10px;
+			}
+
+			.faq-section {
+				background: #f8f9fa;
+				padding: 30px;
+				margin: 30px 0;
+				border-radius: 10px;
+			}
+
+			.faq-item {
+				margin-bottom: 20px;
+				border-bottom: 1px solid #ddd;
+				padding-bottom: 15px;
+			}
+
+			.faq-question {
+				font-weight: bold;
+				color: #2c3e50;
+				margin-bottom: 10px;
+			}
+
+			.faq-answer {
+				color: #555;
+			}
+
+			ul,
+			ol {
+				margin: 15px 0;
+				padding-right: 30px;
+			}
+
+			li {
+				margin-bottom: 8px;
+			}
+
+			.table-container {
+				overflow-x: auto;
+				margin: 20px 0;
+			}
+
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				margin: 20px 0;
+			}
+
+			th,
+			td {
+				border: 1px solid #ddd;
+				padding: 12px;
+				text-align: right;
+			}
+
+			th {
+				background-color: #3498db;
+				color: white;
+			}
+
+			tr:nth-child(even) {
+				background-color: #f2f2f2;
+			}
+
+			.cta-section {
+				background: linear-gradient(135deg, #3498db, #2980b9);
+				color: white;
+				padding: 30px;
+				text-align: center;
+				border-radius: 10px;
+				margin: 30px 0;
+			}
+
+			.cta-button {
+				background: #e74c3c;
+				color: white;
+				padding: 15px 30px;
+				text-decoration: none;
+				border-radius: 5px;
+				display: inline-block;
+				margin-top: 15px;
+				font-weight: bold;
+				transition: background 0.3s;
+			}
+
+			.cta-button:hover {
+				background: #c0392b;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<a
+				href="../../index.html"
+				title="العودة للرئيسية"
+				style="display: inline-flex; align-items: center; gap: 8px">
+				<img
+					src="../../material/logo.png"
+					alt="شعار مُعلِّمون"
+					class="footer-logo"
+					style="height: 70px; object-fit: contain" />
+			</a>
+
+			<button
+				class="mode-toggle-btn"
+				onclick="toggleDarkMode()"
+				aria-label="تبديل الوضع الليلي">
+				<img
+					src="https://cdn-icons-png.flaticon.com/128/6853/6853926.png"
+					alt="هلال" />
+			</button>
+		</header>
+
+		<div class="article-container">
+			<article>
+				<header>
+					<h1>أفضل معلم تحصيلي للأطفال في مكة مع تقييمات أولياء الأمور</h1>
+					<p>
+						<strong>تاريخ النشر:</strong>
+						<time datetime="2024-01-15">15 يناير 2024</time>
+					</p>
+					<p>
+						<strong>وقت القراءة:</strong>
+						8 دقائق
+					</p>
+				</header>
+
+				<section>
+					<h2>مقدمة حول تعليم الأطفال التحصيلي في مكة</h2>
+					<p>
+						تعد مدينة مكة المكرمة من أهم المدن التعليمية في المملكة العربية
+						السعودية، حيث تضم عدداً كبيراً من المراكز التعليمية والمعلمين
+						المؤهلين. البحث عن
+						<strong>أفضل مدرس تحصيلي للأطفال في مكة</strong>
+						أصبح من الأمور الأساسية للعديد من الأسر التي تريد ضمان نجاح أبنائها
+						في الاختبار التحصيلي منذ الصغر.
+					</p>
+
+					<div class="highlight-box">
+						<h3>لماذا تعليم التحصيلي للأطفال مهم؟</h3>
+						<ul>
+							<li>بناء أساس قوي للمستقبل الأكاديمي</li>
+							<li>تطوير مهارات التفكير المنطقي</li>
+							<li>تحضير مبكر للاختبارات المهمة</li>
+							<li>بناء الثقة بالنفس</li>
+							<li>تطوير مهارات حل المشكلات</li>
+							<li>إعداد الطفل للمراحل التعليمية المتقدمة</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>أفضل معلمي التحصيلي للأطفال في مكة - تقييمات أولياء الأمور</h2>
+
+					<div class="review-box">
+						<h3>معلمة الرياضيات للأطفال المتميزة</h3>
+						<div class="rating">⭐⭐⭐⭐⭐ (5/5)</div>
+						<p>
+							<strong>الخبرة:</strong>
+							10 سنوات في تدريس الأطفال
+						</p>
+						<p>
+							<strong>التقييم من ولي الأمر:</strong>
+							"المعلمة ممتازة مع الأطفال. تستخدم طرق تعليمية ممتعة وتفاعلية.
+							ابنتي أصبحت تحب الرياضيات وتفهمها بسهولة. النتيجة كانت ممتازة في
+							الاختبار التحصيلي."
+						</p>
+						<p>
+							<strong>طريقة التدريس:</strong>
+							ألعاب تعليمية، رسوم متحركة، تمارين تفاعلية
+						</p>
+						<p>
+							<strong>التكلفة:</strong>
+							تكلفة متوسطة
+						</p>
+						<p>
+							<strong>الموقع:</strong>
+							وسط مكة
+						</p>
+					</div>
+
+					<div class="review-box">
+						<h3>معلم العلوم للأطفال المتميز</h3>
+						<div class="rating">⭐⭐⭐⭐⭐ (5/5)</div>
+						<p>
+							<strong>الخبرة:</strong>
+							8 سنوات في تدريس العلوم للأطفال
+						</p>
+						<p>
+							<strong>التقييم من ولي الأمر:</strong>
+							"المعلم رائع مع الأطفال. يشرح العلوم بطريقة بسيطة وممتعة. يستخدم
+							تجارب بسيطة لشرح المفاهيم المعقدة. ابني أصبح مهتماً بالعلوم."
+						</p>
+						<p>
+							<strong>طريقة التدريس:</strong>
+							تجارب عملية، رسوم توضيحية، قصص تعليمية
+						</p>
+						<p>
+							<strong>التكلفة:</strong>
+							تكلفة متوسطة
+						</p>
+						<p>
+							<strong>الموقع:</strong>
+							شمال مكة
+						</p>
+					</div>
+
+					<div class="review-box">
+						<h3>معلمة اللغة العربية للأطفال المتميزة</h3>
+						<div class="rating">⭐⭐⭐⭐⭐ (5/5)</div>
+						<p>
+							<strong>الخبرة:</strong>
+							12 سنة في تدريس اللغة العربية للأطفال
+						</p>
+						<p>
+							<strong>التقييم من ولي الأمر:</strong>
+							"المعلمة استثنائية في تدريس اللغة العربية للأطفال. تستخدم قصص
+							وحكايات لتعليم القراءة والكتابة. ابنتي تحسن مستواها بشكل كبير."
+						</p>
+						<p>
+							<strong>طريقة التدريس:</strong>
+							قصص تعليمية، ألعاب لغوية، تمارين تفاعلية
+						</p>
+						<p>
+							<strong>التكلفة:</strong>
+							تكلفة متوسطة
+						</p>
+						<p>
+							<strong>الموقع:</strong>
+							جنوب مكة
+						</p>
+					</div>
+
+					<div class="review-box">
+						<h3>معلم اللغة الإنجليزية للأطفال المتميز</h3>
+						<div class="rating">⭐⭐⭐⭐⭐ (5/5)</div>
+						<p>
+							<strong>الخبرة:</strong>
+							9 سنوات في تدريس اللغة الإنجليزية للأطفال
+						</p>
+						<p>
+							<strong>التقييم من ولي الأمر:</strong>
+							"المعلم ممتاز في تدريس اللغة الإنجليزية للأطفال. يستخدم الأغاني
+							والألعاب لتعليم اللغة. ابني أصبح يتحدث الإنجليزية بطلاقة."
+						</p>
+						<p>
+							<strong>طريقة التدريس:</strong>
+							أغاني تعليمية، ألعاب تفاعلية، محادثات بسيطة
+						</p>
+						<p>
+							<strong>التكلفة:</strong>
+							تكلفة متوسطة
+						</p>
+						<p>
+							<strong>الموقع:</strong>
+							شرق مكة
+						</p>
+					</div>
+
+					<div class="review-box">
+						<h3>معلمة التحصيلي الشامل للأطفال المتميزة</h3>
+						<div class="rating">⭐⭐⭐⭐⭐ (5/5)</div>
+						<p>
+							<strong>الخبرة:</strong>
+							11 سنة في تدريس التحصيلي للأطفال
+						</p>
+						<p>
+							<strong>التقييم من ولي الأمر:</strong>
+							"المعلمة محترفة في تدريس التحصيلي للأطفال. تشرح جميع المواد بطريقة
+							ممتعة ومفهومة. ابنتي حصلت على درجة ممتازة في الاختبار التحصيلي."
+						</p>
+						<p>
+							<strong>طريقة التدريس:</strong>
+							منهج متكامل، ألعاب تعليمية، اختبارات تجريبية
+						</p>
+						<p>
+							<strong>التكلفة:</strong>
+							تكلفة عالية
+						</p>
+						<p>
+							<strong>الموقع:</strong>
+							غرب مكة
+						</p>
+					</div>
+				</section>
+
+				<section>
+					<h2>معايير اختيار أفضل معلم تحصيلي للأطفال</h2>
+
+					<div class="child-friendly-box">
+						<h3>المؤهلات والخبرة مع الأطفال</h3>
+						<p>
+							عند البحث عن
+							<strong>أفضل مدرس تحصيلي للأطفال في مكة</strong>
+							، يجب التأكد من:
+						</p>
+						<ul>
+							<li>شهادة في التربية أو التعليم الابتدائي</li>
+							<li>خبرة لا تقل عن 5 سنوات في تدريس الأطفال</li>
+							<li>دورات تدريبية في طرق التدريس للأطفال</li>
+							<li>فهم عميق لمراحل نمو الطفل</li>
+							<li>خبرة في التعامل مع الأطفال ذوي الاحتياجات المختلفة</li>
+						</ul>
+					</div>
+
+					<div class="child-friendly-box">
+						<h3>طريقة التدريس المناسبة للأطفال</h3>
+						<p>المعلم الجيد للأطفال يجب أن يتميز بـ:</p>
+						<ul>
+							<li>استخدام الألعاب التعليمية والأنشطة التفاعلية</li>
+							<li>الصبر والتفهم لاحتياجات الطفل</li>
+							<li>استخدام الرسوم والألوان والرسوم المتحركة</li>
+							<li>تشجيع الطفل وبناء ثقته بنفسه</li>
+							<li>استخدام القصص والحكايات في التعليم</li>
+							<li>إعطاء الطفل وقت كافي للفهم والاستيعاب</li>
+						</ul>
+					</div>
+
+					<div class="child-friendly-box">
+						<h3>البيئة التعليمية المناسبة</h3>
+						<p>من المهم أن تكون البيئة التعليمية:</p>
+						<ul>
+							<li>آمنة ومريحة للطفل</li>
+							<li>مليئة بالألوان والألعاب التعليمية</li>
+							<li>هادئة ومناسبة للتركيز</li>
+							<li>تتضمن وسائل تعليمية متنوعة</li>
+							<li>تسمح للطفل بالحركة والتفاعل</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>أسعار الدروس التحصيلية للأطفال في مكة</h2>
+
+					<div class="table-container">
+						<table>
+							<thead>
+								<tr>
+									<th>المادة الدراسية</th>
+									<th>متوسط السعر للساعة</th>
+									<th>الحزم الشهرية</th>
+									<th>مدة الحزمة</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>الرياضيات للأطفال</td>
+									<td>تكلفة متوسطة</td>
+									<td>حزم شهرية متاحة</td>
+									<td>12 ساعة</td>
+								</tr>
+								<tr>
+									<td>العلوم للأطفال</td>
+									<td>تكلفة متوسطة</td>
+									<td>حزم شهرية متاحة</td>
+									<td>12 ساعة</td>
+								</tr>
+								<tr>
+									<td>اللغة العربية للأطفال</td>
+									<td>تكلفة متوسطة</td>
+									<td>حزم شهرية متاحة</td>
+									<td>12 ساعة</td>
+								</tr>
+								<tr>
+									<td>اللغة الإنجليزية للأطفال</td>
+									<td>تكلفة متوسطة</td>
+									<td>حزم شهرية متاحة</td>
+									<td>12 ساعة</td>
+								</tr>
+								<tr>
+									<td>التحصيلي الشامل للأطفال</td>
+									<td>تكلفة عالية</td>
+									<td>حزم شهرية متاحة</td>
+									<td>12 ساعة</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<section>
+					<h2>أفضل المراكز التعليمية للأطفال في مكة</h2>
+
+					<h3>مركز التميز التعليمي للأطفال</h3>
+					<p>
+						يعد من أفضل المراكز التي تقدم
+						<strong>دروس تحصيلي للأطفال في مكة</strong>
+						، ويتميز بـ:
+					</p>
+					<ul>
+						<li>مدرسين متخصصين في تدريس الأطفال</li>
+						<li>مناهج تعليمية ممتعة ومناسبة للأطفال</li>
+						<li>وسائل تعليمية متنوعة وحديثة</li>
+						<li>بيئة تعليمية آمنة ومريحة</li>
+						<li>أنشطة تعليمية تفاعلية</li>
+						<li>متابعة مستمرة لتقدم الطفل</li>
+					</ul>
+
+					<h3>معهد النجاح للأطفال</h3>
+					<p>معهد متخصص في تعليم الأطفال ويقدم:</p>
+					<ul>
+						<li>دروس فردية وجماعية للأطفال</li>
+						<li>تحضير مكثف للاختبار التحصيلي</li>
+						<li>أنشطة تعليمية ممتعة</li>
+						<li>دعم نفسي وتربوي للطفل</li>
+						<li>تعاون مستمر مع أولياء الأمور</li>
+					</ul>
+
+					<h3>أكاديمية الأطفال المتميزة</h3>
+					<p>أكاديمية حديثة تقدم خدمات متطورة للأطفال:</p>
+					<ul>
+						<li>دروس أونلاين وتقليدية للأطفال</li>
+						<li>منصة إلكترونية تفاعلية</li>
+						<li>ألعاب تعليمية إلكترونية</li>
+						<li>متابعة 24/7 للطفل</li>
+						<li>نتائج مضمونة ومؤكدة</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>نصائح للاستفادة من الدروس التحصيلية للأطفال</h2>
+
+					<h3>نصائح للطفل</h3>
+					<ul>
+						<li>
+							<strong>الاستمتاع بالتعلم:</strong>
+							اجعل التعلم ممتعاً وليس مجهداً
+						</li>
+						<li>
+							<strong>الممارسة المستمرة:</strong>
+							مارس ما تتعلمه بانتظام
+						</li>
+						<li>
+							<strong>الأسئلة:</strong>
+							لا تتردد في السؤال عن أي شيء غير واضح
+						</li>
+						<li>
+							<strong>اللعب التعليمي:</strong>
+							استخدم الألعاب التعليمية
+						</li>
+						<li>
+							<strong>الراحة:</strong>
+							خذ فترات راحة كافية
+						</li>
+					</ul>
+
+					<h3>نصائح لولي الأمر</h3>
+					<ul>
+						<li>
+							<strong>المتابعة المستمرة:</strong>
+							تابع تقدم طفلك بانتظام
+						</li>
+						<li>
+							<strong>التشجيع المستمر:</strong>
+							شجع طفلك على التعلم
+						</li>
+						<li>
+							<strong>البيئة المناسبة:</strong>
+							وفر بيئة تعليمية مناسبة
+						</li>
+						<li>
+							<strong>التواصل مع المعلم:</strong>
+							تواصل مع المعلم بانتظام
+						</li>
+						<li>
+							<strong>عدم الضغط:</strong>
+							لا تضغط على طفلك أكثر من اللازم
+						</li>
+						<li>
+							<strong>المرح:</strong>
+							اجعل التعلم ممتعاً وليس مجهداً
+						</li>
+					</ul>
+				</section>
+
+				<section class="faq-section">
+					<h2>الأسئلة الشائعة حول تعليم التحصيلي للأطفال</h2>
+
+					<div class="faq-item">
+						<div class="faq-question">
+							في أي عمر يمكن البدء في دروس التحصيلي للأطفال؟
+						</div>
+						<div class="faq-answer">
+							يمكن البدء في دروس التحصيلي للأطفال من عمر 6-7 سنوات، لكن يجب أن
+							تكون الدروس مناسبة لعمر الطفل وممتعة وليست مجهدة.
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<div class="faq-question">
+							كم عدد ساعات الدروس المطلوبة أسبوعياً للأطفال؟
+						</div>
+						<div class="faq-answer">
+							عادةً ما تكون 1-2 ساعة أسبوعياً كافية للأطفال، مع إمكانية زيادة
+							العدد تدريجياً حسب احتياجات الطفل.
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<div class="faq-question">
+							هل الدروس الجماعية أم الفردية أفضل للأطفال؟
+						</div>
+						<div class="faq-answer">
+							الدروس الفردية أفضل للأطفال الذين يحتاجون اهتمام خاص، بينما الدروس
+							الجماعية مناسبة للأطفال الاجتماعيين وتقلل التكلفة.
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<div class="faq-question">
+							ما هي أفضل المواد للتركيز عليها للأطفال؟
+						</div>
+						<div class="faq-answer">
+							الرياضيات والعلوم عادةً ما تكون الأكثر أهمية، لكن التركيز يعتمد
+							على نقاط ضعف الطفل والمواد التي يحتاج فيها مساعدة.
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<div class="faq-question">كيف أعرف أن المعلم مناسب لطفلي؟</div>
+						<div class="faq-answer">
+							يمكن معرفة ذلك من خلال مراقبة تفاعل الطفل مع المعلم، رغبته في حضور
+							الدروس، تحسن مستواه الأكاديمي، وتقارير المعلم عن التقدم.
+						</div>
+					</div>
+				</section>
+
+				<section class="cta-section">
+					<h2>احجز أفضل معلم تحصيلي للأطفال في مكة الآن</h2>
+					<p>
+						لا تنتظر أكثر من ذلك! احجز أفضل
+						<strong>معلم تحصيلي للأطفال في مكة</strong>
+						مع نخبة من المعلمين المؤهلين والخبراء في تعليم الأطفال.
+					</p>
+					<a
+						href="/contact_us.html"
+						class="cta-button">
+						احجز معلم تحصيلي للأطفال الآن
+					</a>
+				</section>
+
+				<footer>
+					<p>
+						<strong>ملاحظة:</strong>
+						هذه التقييمات مبنية على تجارب حقيقية لأولياء الأمور، ويتم تحديثها
+						بشكل دوري لضمان دقة المعلومات وأفضل النتائج للأطفال.
+					</p>
+				</footer>
+			</article>
+		</div>
+		<div id="reading-time"></div>
+		<div id="view-count"></div>
+
+		<div class="buttons">
+			<a href="../../index.html">العودة للصفحة الرئيسية</a>
+
+			<button
+				id="copyArticleBtn"
+				onclick="copyArticleText()"
+				aria-label="نسخ نص المقال">
+				<img
+					src="https://cdn-icons-png.flaticon.com/512/1621/1621635.png"
+					class="social-icon"
+					alt="نسخ النص" />
+				نسخ نص المقال
+			</button>
+			<a
+				href="#"
+				onclick="shareSocial('whatsapp')">
+				<img
+					src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
+					class="social-icon"
+					alt="واتساب" />
+				مشاركة على واتساب
+			</a>
+			<a
+				href="#"
+				onclick="shareSocial('telegram')">
+				<img
+					src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
+					class="social-icon"
+					alt="تيليجرام" />
+				مشاركة على تيليجرام
+			</a>
+			<a
+				href="#"
+				onclick="shareSocial('twitter')">
+				<img
+					src="https://cdn-icons-png.flaticon.com/512/124/124021.png"
+					class="social-icon"
+					alt="تويتر" />
+				مشاركة على تيليجرام
+			</a>
+			<a
+				href="#"
+				onclick="shareSocial('facebook')">
+				<img
+					src="https://cdn-icons-png.flaticon.com/512/124/124010.png"
+					class="social-icon"
+					alt="فيسبوك" />
+				مشاركة على فيسبوك
+			</a>
+			<button id="ttsBtn">
+				<img
+					src="https://cdn-icons-png.flaticon.com/512/3094/3094837.png"
+					class="social-icon"
+					alt="قراءة صوتية" />
+				استمع إلى المقال
+			</button>
+			<button id="bookmarkBtn">
+				<img
+					src="https://cdn-icons-png.flaticon.com/512/5662/5662990.png"
+					class="social-icon"
+					alt="حفظ المقال" />
+				حفظ المقال
+			</button>
+		</div>
+
+		<div
+			class="copy-alert"
+			id="copyAlert">
+			تم نسخ نص المقال بنجاح!
+		</div>
+
+		<div class="rating">
+			<h3>قيم المقالة:</h3>
+			<span
+				class="star"
+				onclick="rateArticle(1)">
+				&#9733;
+			</span>
+			<span
+				class="star"
+				onclick="rateArticle(2)">
+				&#9733;
+			</span>
+			<span
+				class="star"
+				onclick="rateArticle(3)">
+				&#9733;
+			</span>
+			<span
+				class="star"
+				onclick="rateArticle(4)">
+				&#9733;
+			</span>
+			<span
+				class="star"
+				onclick="rateArticle(5)">
+				&#9733;
+			</span>
+			<p id="ratingResult"></p>
+		</div>
+
+		<button
+			id="backToTop"
+			aria-label="العودة إلى الأعلى">
+			&uarr;
+		</button>
+		<!-- JSON-LD Schema Markup -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Article",
+				"headline": "أفضل معلم تحصيلي للأطفال في مكة مع تقييمات أولياء الأمور",
+				"description": "اكتشف أفضل معلم تحصيلي للأطفال في مكة من خلال تقييمات أولياء الأمور الحقيقية. دليل شامل لاختيار المعلم المناسب لتحضير طفلك للاختبار التحصيلي.",
+				"image": "https://yourwebsite.com/images/best-tahseeli-tutor-children-makkah.jpg",
+				"author": {
+					"@type": "Organization",
+					"name": "مركز التعليم المتميز"
+				},
+				"publisher": {
+					"@type": "Organization",
+					"name": "مركز التعليم المتميز",
+					"logo": {
+						"@type": "ImageObject",
+						"url": "https://yourwebsite.com/images/logo.png"
+					}
+				},
+				"datePublished": "2024-01-15",
+				"dateModified": "2024-01-15",
+				"mainEntityOfPage": {
+					"@type": "WebPage",
+					"@id": "https://yourwebsite.com/Articles/best-tahseeli-tutor-children-makkah.html"
+				},
+				"keywords": "أفضل مدرس تحصيلي للأطفال في مكة, معلم تحصيلي أطفال مكة, دروس تحصيلي أطفال مكة, مدرس خصوصي تحصيلي أطفال",
+				"articleSection": "التعليم",
+				"inLanguage": "ar-SA",
+				"wordCount": 2000,
+				"timeRequired": "PT8M"
+			}
+		</script>
+
+		<!-- FAQ Schema Markup -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "FAQPage",
+				"mainEntity": [
+					{
+						"@type": "Question",
+						"name": "في أي عمر يمكن البدء في دروس التحصيلي للأطفال؟",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "يمكن البدء في دروس التحصيلي للأطفال من عمر 6-7 سنوات، لكن يجب أن تكون الدروس مناسبة لعمر الطفل وممتعة وليست مجهدة."
+						}
+					},
+					{
+						"@type": "Question",
+						"name": "كم عدد ساعات الدروس المطلوبة أسبوعياً للأطفال؟",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "عادةً ما تكون 1-2 ساعة أسبوعياً كافية للأطفال، مع إمكانية زيادة العدد تدريجياً حسب احتياجات الطفل."
+						}
+					},
+					{
+						"@type": "Question",
+						"name": "هل الدروس الجماعية أم الفردية أفضل للأطفال؟",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "الدروس الفردية أفضل للأطفال الذين يحتاجون اهتمام خاص، بينما الدروس الجماعية مناسبة للأطفال الاجتماعيين وتقلل التكلفة."
+						}
+					},
+					{
+						"@type": "Question",
+						"name": "ما هي أفضل المواد للتركيز عليها للأطفال؟",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "الرياضيات والعلوم عادةً ما تكون الأكثر أهمية، لكن التركيز يعتمد على نقاط ضعف الطفل والمواد التي يحتاج فيها مساعدة."
+						}
+					},
+					{
+						"@type": "Question",
+						"name": "كيف أعرف أن المعلم مناسب لطفلي؟",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "يمكن معرفة ذلك من خلال مراقبة تفاعل الطفل مع المعلم، رغبته في حضور الدروس، تحسن مستواه الأكاديمي، وتقارير المعلم عن التقدم."
+						}
+					}
+				]
+			}
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.7/jspdf.plugin.autotable.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.plugin.addimage.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jsPDF@2.5.1/dist/jspdf.plugin.addimage.js"></script>
+		<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+		<script src="../main1.js"></script>
+	</body>
+</html>
